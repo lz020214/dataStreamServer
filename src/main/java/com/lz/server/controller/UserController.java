@@ -16,7 +16,7 @@ public class UserController {
 
     @GetMapping("/user")
     public List<User>  query(){
-        List<User> list = userMapper.find();
+        List<User> list = userMapper.selectList(null);
         System.out.println(list);
         return list;
     }
